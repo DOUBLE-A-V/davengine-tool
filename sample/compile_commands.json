@@ -12,7 +12,7 @@
       "-I./include",
       "-I./include/davengine/",
       "-I./include/davengine/modifiers/",
-      "-I./scripts/",
+      "-I./src/",
       "-fdeclspec"
     ],
     "directory": "/home/dav/cdev/davengine-tool/sample/"
