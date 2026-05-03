@@ -1,5 +1,3 @@
-// #define DAV_DLL
-
 #ifdef DAV_EXPORTS
 #define DAV_API __declspec(dllexport)
 #elif !defined(DAV_LINUX)
@@ -10,18 +8,18 @@
 #include <raylib.h>
 // #include "davengine.h"
 
-class Sprite : public Modifier {
+class RectangleDraw : public Modifier {
 public:
   Color color;
-  Texture2D texture;
+  float width;
+  float height;
+  RectangleDraw();
 
 #if !defined(DAV_DLL) && !defined(DAVENGINE_GAME)
-  Sprite() { color = Color{255, 255, 255, 255}; }
   void Draw() override;
-  Sprite *CreateClone() override;
+  RectangleDraw *CreateClone() override;
 #else
-  Sprite() { color = Color{255, 255, 255, 255}; }
   DAV_API void Draw() override;
-  DAV_API Sprite *CreateClone() override;
+  DAV_API RectangleDraw *CreateClone() override;
 #endif
 };

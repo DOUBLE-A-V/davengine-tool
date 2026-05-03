@@ -1,0 +1,20 @@
+[
+  {
+    "file": "game.cpp",
+    "arguments": [
+     "/usr/bin/g++",
+      "-c",
+      "game.cpp",
+      "-Wall",
+      "-std=c++17",
+      "-o3",
+      "-I.",
+      "-I./include",
+      "-I./include/davengine/",
+      "-I./include/davengine/modifiers/",
+      "-I./scripts/",
+      "-fdeclspec"
+    ],
+    "directory": "/home/dav/cdev/davengine-tool/sample/"
+  }
+]
